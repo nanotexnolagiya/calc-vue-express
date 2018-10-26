@@ -1,0 +1,86 @@
+html {
+	background: #CCC;
+	font-family: sans-serif;
+}
+
+body {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#calculator {
+	border: 2px solid #222;
+	border-radius: 4px;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+#result {
+	font-size: 18px;
+	width: 100%;
+	height: 70px;
+	box-sizing: border-box;
+	display: grid;
+	padding: 10px;
+	justify-items: end;
+	align-items: center;
+	border-bottom: 2px solid #222;
+}
+
+#pad {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(60px, 1fr));
+	grid-gap: 10px;
+	padding: 15px;
+}
+
+.btn {
+	cursor: pointer;
+	font-size: 20px;
+	display: grid;
+	padding: 15px 10px;
+	justify-items: center;
+	align-items: center;
+	color: #FAFAFA;
+	border: 1px solid #222;
+	border-radius: 4px;
+	background: #777;
+}
+
+#clear {
+	background: steelblue;
+}
+
+#zero {
+	grid-column: 1/3;
+}
+
+#equal {
+	background: seagreen;
+}
+
+ul#history {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 420px;
+  max-height: 420px;
+  overflow-y: scroll;
+}
+
+ul#history li {
+  padding: 10px 5px;
+  border: 1px solid #000;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 0 30px;
+}
