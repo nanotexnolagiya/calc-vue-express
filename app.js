@@ -56,4 +56,24 @@ app.get('/history', async (req, res) => {
   }
 });
 
+app.delete('/history', async (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  try {
+    await History.destroy({
+      where: {
+        ip
+      }
+    });
+
+    res.status(200).send({
+      ok: true
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      ok: false
+    });
+  }
+});
+
 server.listen(config.PORT, () => console.log('Listen port *:' + config.PORT));
